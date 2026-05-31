@@ -3,7 +3,8 @@
     "category": "category1",
     "name": "product1",
     "image": "images/1.jpg",
-    "description": "sample description1"
+    "description": "sample description1",
+    "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     "category": "category2",

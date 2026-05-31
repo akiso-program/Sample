@@ -5,6 +5,7 @@ type Item = {
   name: string;
   image: string;
   description?: string;
+  youtube?: string;
 };
 
 type ModalState = {
