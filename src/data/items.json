@@ -2,37 +2,37 @@
   {
     "category": "ソックス",
     "name": "白黒ストライプソックス",
-    "image": "/images/socks01.png",
+    "image": "images/socks01.png",
     "description": "シンプルな白黒ストライプの靴下"
   },
   {
     "category": "ソックス",
     "name": "カラフルストライプソックス",
-    "image": "/images/socks02.png",
+    "image": "images/socks02.png",
     "description": "虹色のストライプが特徴の靴下"
   },
   {
     "category": "バッグ",
     "name": "本革ショルダーバッグ",
-    "image": "/images/bag01.png",
+    "image": "images/bag01.png",
     "description": "上質な本革を使用したショルダーバッグ"
   },
   {
     "category": "ハンカチ",
     "name": "刺繍入りハンカチ",
-    "image": "/images/handkerchief01.png",
+    "image": "images/handkerchief01.png",
     "description": "繊細な花の刺繍が施されたハンカチ"
   },
   {
     "category": "レイングッズ",
     "name": "レインブーツ＆アンブレラ",
-    "image": "/images/rain01.png",
+    "image": "images/rain01.png",
     "description": "落ち着いた色味のレインブーツと透明傘のセット"
   },
   {
     "category": "豚革バッグ",
     "name": "本革ショルダーバッグ",
-    "image": "/images/bag01.png",
+    "image": "images/bag01.png",
     "description": "上質な本革を使用したショルダーバッグ"
   }
 ]
