@@ -3,6 +3,7 @@ import { create } from "zustand";
 type Item = {
   id: string;
   name: string;
+  category: string;
   image: string;
   description?: string;
   youtube?: string;
