@@ -1,17 +1,18 @@
 import { create } from "zustand";
 
-type Item = {
+export type Item = {
   id: string;
   name: string;
   category: string;
   image: string;
-  description?: string;
-  youtube?: string;
+  youtube: string | null;
+  description: string | null;
+  created_at: string;
 };
 
 type ModalState = {
-  selectedItem: Item | null;
-  openModal: (item: Item) => void;
+  selectedItem: Partial<Item> | null;
+  openModal: (item: Partial<Item>) => void;
   closeModal: () => void;
 };
 

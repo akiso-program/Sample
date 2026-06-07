@@ -5,10 +5,10 @@ import ItemModal from "./ItemModal";
 import EditItemModal from "./EditItemModal";
 import { supabase } from "../utils/supabase";
 import { toEmbedUrl } from "../utils/toEmbedUrl";
-import { useModalStore } from "../store/useModalStore";
+import { useModalStore, type Item } from "../store/useModalStore";
 
 const PageLayout: React.FC<{ mode: "view" | "edit" }> = ({ mode }) => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
   
   const fetchItems = async () => {
     const { data } = await supabase
@@ -17,7 +17,7 @@ const PageLayout: React.FC<{ mode: "view" | "edit" }> = ({ mode }) => {
       .order("created_at", { ascending: true });
 
     setItems(
-      data.map(item => ({
+      (data ?? []).map(item => ({
         ...item,
         youtube: item.youtube ? toEmbedUrl(item.youtube) : null
       }))
