@@ -3,7 +3,7 @@ import { supabase } from "../utils/supabase";
 import ImageUploader from "../utils/ImageUploader";
 import { useModalStore } from "../store/useModalStore";
 
-const EditItemModal : React.FC<{ fetchItems: () => void }> = ({ fetchItems }) => {
+const EditItemModal : React.FC<{ fetchItems: () => void; categories: string[]}> = ({ fetchItems, categories }) => {
   const { selectedItem, closeModal } = useModalStore();
 
   const [name, setName] = useState(selectedItem?.name ?? "");
@@ -66,6 +66,13 @@ const EditItemModal : React.FC<{ fetchItems: () => void }> = ({ fetchItems }) =>
         <input value={name} onChange={(e) => setName(e.target.value)} />
 
         <label>Category</label>
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          {categories.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
         <input value={category} onChange={(e) => setCategory(e.target.value)} />
 
         <label>Image</label>

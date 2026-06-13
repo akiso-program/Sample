@@ -11,7 +11,7 @@ const ItemCard: React.FC<Props> = ({ item }) => {
   return (
     <div className="item-card" onClick={() => openModal(item)}>
       <img src={item.image} alt={item.name} />
-      <p className="name">{item.name}</p>
+      <div className="name">{item.name}</div>
     </div>
   );
 };

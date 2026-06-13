@@ -14,7 +14,8 @@ const PageLayout: React.FC<{ mode: "view" | "edit" }> = ({ mode }) => {
     const { data } = await supabase
       .from("Items")
       .select()
-      .order("created_at", { ascending: true });
+      .order("category", { ascending: true })
+      .order("name", { ascending: true });
 
     setItems(
       (data ?? []).map(item => ({
@@ -61,7 +62,7 @@ const PageLayout: React.FC<{ mode: "view" | "edit" }> = ({ mode }) => {
 
       {/* 編集モーダル（編集モード） */}
       {mode === "edit" && (
-        <EditItemModal fetchItems={fetchItems} />
+        <EditItemModal fetchItems={fetchItems} categories={categories} />
       )}
     </div>
   );
